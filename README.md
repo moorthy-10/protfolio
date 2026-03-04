@@ -1,16 +1,34 @@
-# React + Vite
+# Moorthy VK | AI Automation Engineer & Agentic n8n Architect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional portfolio showcasing expertise in building autonomous AI agents, complex n8n workflows, and agentic reasoning systems.
 
-Currently, two official plugins are available:
+## 🚀 Core Expertise
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Agentic n8n Workflows**: Architecting autonomous loops that think, act, and reason.
+- **AI & Vector Intelligence**: Implementing RAG (Retrieval-Augmented Generation) with Pincone and LLMs.
+- **System Automation**: Connecting APIs, Webhooks, and Cloud infrastructure into unified autonomous systems.
+- **Data Architecture**: Designing scalable ETL pipelines and multi-step reasoning chains.
 
-## React Compiler
+## 🛠️ Technological Arsenal
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Automation**: n8n, Zapier
+- **AI Models**: OpenAI (GPT-4), Anthropic (Claude), Google Gemini
+- **Development**: Python, JavaScript (React, Node.js), Java
+- **Infrastructure**: AWS, Docker, Jenkins
+- **Databases**: Pinecone, MongoDB, Postgres, Airtable, MySQL
+- **Analysis**: Power BI, Excel
 
-## Expanding the ESLint configuration
+## 📈 Key Statistics
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **15+** Automation Workflows in Production
+- **API & Webhook** Integration Expert
+- **GenLab AI** Production Experience
+- **79.6%** Academic CGPA
+
+## 🌐 Connect With Me
+
+- **Base**: Chennai, India
+- **Status**: Open for Work / Projects
+
+---
+Built with React + Vite + Framer Motion + Lenis.
