@@ -1573,6 +1573,272 @@ section {
   animation: pulse-data 4s linear infinite;
 }
 
+/* Responsive Design System */
+@media (max-width: 1200px) {
+  .hero-headline {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .expertise-bento {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .bento-item {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    padding: 2.5rem;
+  }
+
+  .arch-canvas-premium {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  body,
+  a,
+  button {
+    cursor: auto !important;
+    /* Default cursor on mobile */
+  }
+
+  .cursor-trailer,
+  .cursor-glow-custom {
+    display: none;
+    /* Disable custom cursor effects on mobile */
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .mobile-toggle {
+    display: block;
+    color: var(--accent);
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(3, 4, 8, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .hero-headline {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-subheading {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .about-section {
+    padding: 6rem 1.5rem;
+  }
+
+  .personal-details-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-edu-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .demo-container {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .workflow-canvas-demo {
+    overflow-x: auto;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
+  }
+
+  .nodes-lane {
+    min-width: 600px;
+    justify-content: flex-start;
+  }
+
+  .demo-terminal-compact {
+    height: 300px;
+  }
+
+  .arch-canvas-premium {
+    overflow-x: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    min-height: 250px;
+    padding: 3rem 1.5rem;
+  }
+
+  .arch-node-premium {
+    min-width: 120px;
+  }
+
+  .arch-connection-svg {
+    display: none;
+    /* SVG paths are hard to adjust for mobile scroll */
+  }
+
+  .contact-grid {
+    flex-direction: column;
+    gap: 4rem;
+    text-align: center;
+  }
+
+  .contact-meta {
+    align-items: center;
+  }
+
+  .meta-item {
+    justify-content: center;
+  }
+
+  .contact-socials {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .testimonials-grid,
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-marquee-wrapper {
+    padding: 1rem 0;
+  }
+
+  .marquee-item {
+    padding: 0 2rem;
+    font-size: 0.9rem;
+  }
+
+  .marquee-brand-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .floating-tech-bubbles {
+    display: none;
+    /* Too cluttered on small screens */
+  }
+
+  .preloader-content {
+    padding: 2rem;
+    width: 90%;
+  }
+
+  .boot-logs,
+  .loader-bar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 2.8rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .nav-container {
+    padding: 0;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+}
+
+/* Base styles for mobile elements */
+.mobile-toggle {
+  display: none;
+}
+
+.contact-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .demo-container {

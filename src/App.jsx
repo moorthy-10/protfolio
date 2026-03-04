@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
-import { ChevronRight, Cpu, Database, Cloud, Zap, Mail, Github, Linkedin, MapPin, ExternalLink, Box, Layers, Terminal } from 'lucide-react';
+import { ChevronRight, Cpu, Database, Cloud, Zap, Mail, Github, Linkedin, MapPin, ExternalLink, Box, Layers, Terminal, Menu, X } from 'lucide-react';
 import Lenis from 'lenis';
 import './App.css';
 
@@ -276,45 +276,57 @@ const MagneticButton = ({ children }) => {
   );
 };
 
-const Navbar = () => (
-  <nav className="navbar">
-    <div className="nav-container">
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        className="logo neon-text"
-      >
-        VEILU KM<span className="dot">.</span>
-      </motion.div>
-      <div className="nav-links">
-        <MagneticButton><a href="#about">Systems</a></MagneticButton>
-        <MagneticButton><a href="#services">Services</a></MagneticButton>
-        <MagneticButton>
-          <motion.a
-            whileHover={{ scale: 1.05, color: '#00ff99' }}
-            href="/resume.pdf"
-            target="_blank"
-            className="resume-link"
-            style={{ fontSize: '0.8rem', fontWeight: '700', color: 'var(--text-muted)', textDecoration: 'none' }}
-          >
-            RESUME.PDF
-          </motion.a>
-        </MagneticButton>
-        <MagneticButton>
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="#contact"
-            className="contact-nav btn-primary"
-            style={{ borderRadius: '100px', border: 'none' }}
-          >
-            Work With Me
-          </motion.a>
-        </MagneticButton>
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className={`navbar ${isOpen ? 'active' : ''}`}>
+      <div className="nav-container">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="logo neon-text"
+        >
+          VEILU KM<span className="dot">.</span>
+        </motion.div>
+
+        {/* Mobile Toggle */}
+        <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </div>
+
+        <div className={`nav-links ${isOpen ? 'show' : ''}`}>
+          <MagneticButton><a href="#about" onClick={() => setIsOpen(false)}>Systems</a></MagneticButton>
+          <MagneticButton><a href="#services" onClick={() => setIsOpen(false)}>Services</a></MagneticButton>
+          <MagneticButton>
+            <motion.a
+              whileHover={{ scale: 1.05, color: '#00ff99' }}
+              href="/resume.pdf"
+              target="_blank"
+              className="resume-link"
+              onClick={() => setIsOpen(false)}
+              style={{ fontSize: '0.8rem', fontWeight: '700', color: 'var(--text-muted)', textDecoration: 'none' }}
+            >
+              RESUME.PDF
+            </motion.a>
+          </MagneticButton>
+          <MagneticButton>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="contact-nav btn-primary"
+              style={{ borderRadius: '100px', border: 'none' }}
+            >
+              Work With Me
+            </motion.a>
+          </MagneticButton>
+        </div>
       </div>
-    </div>
-  </nav>
-);
+    </nav>
+  );
+};
 
 const Hero = () => {
   const [textIndex, setTextIndex] = useState(0);
